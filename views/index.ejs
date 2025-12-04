@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="main w-full  min-h-screen bg-zinc-900">
+
+        <div class="form p-10 text-white">
+            <form action="/create" method="post">
+                <input name="title" class="block px-5 py-2 bg-zinc-700 w-full rounded-md mb-5" type="text"
+                    placeholder="Enter your task">
+                <textarea name="desc" class="block px-5 py-2 bg-zinc-700 resize-none w-full rounded-md"
+                    placeholder="Write your task description"></textarea>
+                <input class="mt-5 bg-blue-600 rounded-md px-3 py-2 " type="submit" value="Submit">
+            </form>
+        </div>
+
+
+        <div class="tasks p-10 flex gap-3 flex-wrap">
+
+            <% if(files.length> 0){%>
+                <% files.forEach((val)=>{ %>
+
+                    <div class="task min-w-72 px-3 py-4 bg-zinc-800 rounded-md ">
+                        <h1 class="text-white text-2xl tracking-tighter">
+                            <%= val %>
+                        </h1>
+
+                        <div class="flex justify-between">
+                            <a class="text-blue-500 inline-block mt-3" href="/files/<%= val %>">Read More</a>
+                            <a class="text-yellow-600 inline-block mt-3 px-10" href="/edit/<%= val %>">Edit</a>
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+                        <% } else{ %>
+                            <h3 class="text-white">no task yet</h3>
+                            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
