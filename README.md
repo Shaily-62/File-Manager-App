@@ -1,0 +1,36 @@
+# File Manager App (Node.js + Express + EJS)
+
+A simple file manager web application built using **Node.js**, **Express**, **EJS**, and the **fs module**.  
+It allows users to:
+
+✔ Create text files  
+✔ View individual file content  
+✔ Edit file names  
+✔ Automatically render updated file list on homepage  
+
+---
+
+## 🛠️ Tech Stack
+
+- Node.js
+- Express.js
+- EJS Template Engine
+- File System (fs) Module
+- HTML / CSS
+
+---
+
+project-folder/
+│
+├── public/ # Static assets (CSS/JS)
+├── views/ # EJS templates (index.ejs, show.ejs, edit.ejs)
+├── files/ # Stored text files
+├── package.json
+└── server.js # Main Express server
+
+## 🚀 How to Run Locally
+1.git clone https://github.com/Shaily-62/File-Manager-App.git
+2.cd File-Manager-App
+3.npm install
+4.node index.js
+5.http://localhost:3000
