@@ -21,16 +21,20 @@ It allows users to:
 ---
 
 project-folder/
-│
+
 ├── public/ # Static assets (CSS/JS)
+
 ├── views/ # EJS templates (index.ejs, show.ejs, edit.ejs)
+
 ├── files/ # Stored text files
+
 ├── package.json
-└── server.js # Main Express server
+
+└── index.js # Main Express server
 
 ## 🚀 How to Run Locally
-1.git clone https://github.com/Shaily-62/File-Manager-App.git
-2.cd File-Manager-App
-3.npm install
-4.node index.js
-5.http://localhost:3000
+- git clone https://github.com/Shaily-62/File-Manager-App.git
+- cd File-Manager-App
+- npm install
+- node index.js
+- http://localhost:3000
